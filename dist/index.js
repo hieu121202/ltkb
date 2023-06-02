@@ -5,7 +5,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const index_1 = __importDefault(require("./routes/index"));
-const myDataSource_1 = __importDefault(require("./utils/myDataSource"));
 const app = require('express')();
 const path = require('path');
 const handlebars = require('express-handlebars');
@@ -19,21 +18,21 @@ app.engine('.hbs', handlebars.engine({
     extname: '.hbs'
 }));
 app.set('view engine', '.hbs');
-app.set('views', path.join('D:\\typescript-nodejs\\src\\resources\\views'));
+app.set('views', path.join(path.resolve('src/resources'), 'views'));
 // console.log(global._io)
 //HTTP logger
 app.use(morgan('combined'));
 //khai báo để sử dụng khi lấy dữ liệu từ post lên nó sẽ lưu vào body
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
-myDataSource_1.default
-    .initialize()
-    .then(() => {
-    console.log('thành công!');
-})
-    .catch((err) => {
-    console.error('Error during Data Source initialization:', err);
-});
+// myDataSource
+//   .initialize()
+//   .then(() => {
+//     console.log('thành công!')
+//   })
+//   .catch((err: any) => {
+//     console.error('Error during Data Source initialization:', err)
+//   })
 //route init
 (0, index_1.default)(app);
 app.listen(3000, () => {

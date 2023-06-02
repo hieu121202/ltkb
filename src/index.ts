@@ -22,6 +22,8 @@ app.set('views', path.join(path.resolve('src/resources'),'views'))
 
 // console.log(global._io)
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 //HTTP logger
 app.use(morgan('combined'))
 

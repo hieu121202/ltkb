@@ -3,7 +3,7 @@ import { NextFunction, Router, Request, Response } from 'express'
 class siteController {
   public static home(req: Request, res:Response , next:NextFunction) { 
     // return
-    res.render('login')
+    res.render('home')
     // if (req.isAuthenticated()) {
     //   res.redirect('/admin')
     // }

@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 class siteController {
     static home(req, res, next) {
         // return
-        res.render('ta');
+        res.render('login');
         // if (req.isAuthenticated()) {
         //   res.redirect('/admin')
         // }
