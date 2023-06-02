@@ -1,0 +1,26 @@
+<h1>From Chat</h1>
+<h3>{{user.name}}</h3>
+
+<div>Những người online</div>
+<ul id="listUser">
+</ul>
+<form action="/" method="post">
+    <input type="text" id="chat-mes">
+    <button type="submit">gửi</button>
+</form>
+{{#if user}}
+    <input type="hidden" id="idUser" value={{ user.id }}>
+  {{/if}}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+ 
+ <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script> 
+<script>
+      
+
+</script>
+      {{!-- if($("#id_user").val() != undefined){
+        socket.emit('userLogin' , $("#idUser").val())
+      } --}}
+      {{!-- socket.on('userOnline' , data => {
+        $('#listUser').html('<li>' + data.name + '</li>')
+      })
