@@ -1,0 +1,41 @@
+/* REPONSIVE */
+/* ************************ */
+
+@media (max-width: 640px) {
+    .post-container {
+        margin-bottom: 30px;
+        padding: 0 ;
+        width: 100%;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .post-container {
+        padding: 0 2% 5%;
+        width: 49%;
+    }
+    .grid-sizer {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .grid-sizer {
+        width: 33.3%;
+    }
+}
+
+@media (max-width: 1000px) {
+    #main-nav {
+        display: none;
+    } 
+    #navigation .menu-items {
+        display: none;
+    }
+}
+
+@media (min-width: 1001px ) {
+    .menu-navigation {
+        display: none;
+    }
+}

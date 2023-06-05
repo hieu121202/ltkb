@@ -1,7 +1,8 @@
 import express from 'express'
 import route from './routes/index'
-import myDataSource from './utils/myDataSource'
+import myDataSource from './config/myDataSource'
 const app = require('express')()
+const bodyParser = require('body-parser')
 const path = require('path')
 const handlebars = require('express-handlebars')
 const morgan = require('morgan')
@@ -31,17 +32,27 @@ app.use(morgan('combined'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-// myDataSource
-//   .initialize()
-//   .then(() => {
-//     console.log('thành công!')
-//   })
-//   .catch((err: any) => {
-//     console.error('Error during Data Source initialization:', err)
-//   })
+myDataSource
+  .initialize()
+  .then(() => {
+    console.log('thành công!')
+  })
+  .catch((err: any) => {
+    console.error('Error during Data Source initialization:', err)
+  })
+
 //route init
 route(app)
 
 app.listen(3000, () => {
   console.log(`[Server]: I am running at http://localhost:${3000}`)
 })
+
+
+// app.get("/test",(req:any, res:any) => {
+//   const sql = "select * from baiviet";
+//   connection.query(sql,(err, data) => {
+//     if (err) return res.json("err")
+//       return res.json(sql)
+//   })
+// })

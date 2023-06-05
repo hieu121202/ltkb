@@ -1,4 +1,21 @@
-<h1>Nội dung</h1>
+<div class="mt-4">
+    <div class="row">
+        
+        {{#each data}}
+        <div class="col-sm-6 col-lg-4">
+            <div class="card">
+                <img src="{{this.hinh}}" class="card-img-top" width="160" height="160">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.id}}</h5>
+                    <p class="card-text">{{this.tieude}}</p>
+                    <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        
+    </div>
+</div>
 {{!-- <form action="/register" method="post">
     <section>
         <label for="Id">Id</label>

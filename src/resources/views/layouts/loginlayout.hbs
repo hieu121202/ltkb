@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/login.css">
+    <!-- <script src ="login.js"> </script> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+</head>
+<body>
+    {{{body}}}
+</body>
+<script>
+    const tk = document.querySelector('.username');
+    const pw = document.querySelector('.password');
+    const btn = document.querySelector('.button-login');
+  
+    btn.addEventListener('click', function () {
+      if (tk.value == 'hieunguyen' && pw.value == 'khatmau8') {
+        document.location = './admin.html';
+        // alert('Thành công');
+      }
+      else {
+        alert('Sai mật khẩu, vui lòng nhập lại !');
+      }
+    })
+  </script>
+</html>

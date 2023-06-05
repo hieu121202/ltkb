@@ -5,8 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Book Enthusiast</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap-grid.min.css" integrity="sha512-EAgFb1TGFSRh1CCsDotrqJMqB2D+FLCOXAJTE16Ajphi73gQmfJS/LNl6AsjDqDht6Ls7Qr1KWsrJxyttEkxIA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="/css/home.css">
-        {{!-- <link rel="stylesheet" href="./assets/reponsive.css"> --}}
+        <link rel="stylesheet" href="/css/reponsive.css">
         <link rel="stylesheet" href="./assets/icons/fontawesome-free-6.1.1-web/css/all.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
@@ -32,7 +33,83 @@
                     </label>
                 </form>
             </div> 
+            </div>
+
+            <!-- Navigation -->
+            <div class="nav">
+                <nav id="navigation">
+                    <div class="menu-navigation">
+                        <button class="nav-menu">
+                            <i class="fa-solid fa-bars"></i>
+                            MENU
+                        </button>
+
+                        <!-- button Search -->
+                        <a class="search-button" href="#">
+                            <i class="search-icon fa-solid fa-magnifying-glass"></i>
+                        </a> 
+                        <div class="menu-items">
+                            <ul class="menu">
+                                <li>
+                                    <a href="">THÔNG TIN</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="page Su-kien.html" target="_parent">Sự kiện</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">CỘNG ĐỒNG</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="page Diem-tin-sach .html" target="_parent">Điểm tin sách</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">CUỘC SỐNG</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="page Phim-chuyen-the.html" target="_parent">Phim chuyển thể</a></li>
+                                        <li><a href="page Sach-nen-doc.html" target="_parent">Sách nên đọc</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html" target="_parent">CONTACT</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <ul id="main-nav">
+                        <li>
+                            <a href="">THÔNG TIN
+                                <i class="fa-solid fa-caret-down"></i>
+                            </a>
+                            <ul class="subnav">
+                                <li><a href="page Su-kien.html" target="_parent">Sự kiện</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">CỘNG ĐỒNG
+                                <i class="fa-solid fa-caret-down"></i>
+                            </a>
+                            <ul class="subnav">
+                                <li><a href="page Diem-tin-sach .html" target="_parent">Điểm tin sách</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">CUỘC SỐNG
+                                <i class="fa-solid fa-caret-down"></i>
+                            </a>
+                            <ul class="subnav">
+                                <li><a href="page Phim-chuyen-the.html" target="_parent">Phim chuyển thể</a></li>
+                                <li><a href="page Sach-nen-doc.html" target="_parent">Sách nên đọc</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html" target="_parent">CONTACT</a></li>
+
+                    <!-- button Search -->
+                    <a class="search-button" href="#">
+                        <i class="search-icon fa-solid fa-magnifying-glass"></i>
+                    </a>  
+                </ul>
+            </nav>
         </div>
+
         
         <div class="container"> 
             {{{ body }}}
@@ -50,14 +127,69 @@
             </div>
         </div>
         <div class="btn-login">
-            <a class="log-in" href="./Web/login.html" target="_parent">Login</a>
+            <a class="log-in" href="/login" target="_parent">Login</a>
         </div>
     </div>
    
     
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script>
+        // menu
+        $(document).ready(function() {
+            $('.nav-menu').click(function() {
+                $('.menu-items').slideToggle();
+            });
+        });
+
+
+        // Scroll footer
+        var offset = 500;
+        // thời gian di trượt 0.75s ( 1000 = 1s )
+        var duration = 750;
+        $(function(){
+        $(window).scroll(function () {
+        if ($(this).scrollTop() > offset)
+        $('#footer').fadeIn(duration);else
+        $('#footer').fadeOut(duration);
+        });
+        $('#footer').click(function () {
+        $('body,html').animate({scrollTop: 0}, duration);
+        });
+        });
+
+        $(document).ready(function(){
+            $('.search-button').click(function() {
+                $('.search-header').slideToggle();
+            });
+        }
+        );
+
+
+        // Button nav-menu
+        $(document).ready(function() {
+        $('.nav-menu').click(function(){
+            $(this).toggleClass('ButtonClicked');
+        });
+        })
+
+        // button Search
+        $(document).ready(function() {
+            $('.search-icon').click(function(){
+                $(this).toggleClass('ButtonClicked');
+        });
+        })
+
+
+        // Masonry js : Lưới grid
+        $(document).ready(function() {
+            var $grid = $('.posts').masonry({
+                itemSelector: '.post-container',
+                percentPosition: true,
+                columnWidth: '.grid-sizer'
+            });
+        });
+    </script>
 </body>
 
 </html>
