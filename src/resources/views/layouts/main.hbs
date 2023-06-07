@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap-grid.min.css" integrity="sha512-EAgFb1TGFSRh1CCsDotrqJMqB2D+FLCOXAJTE16Ajphi73gQmfJS/LNl6AsjDqDht6Ls7Qr1KWsrJxyttEkxIA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="/css/home.css">
         <link rel="stylesheet" href="/css/reponsive.css">
-        <link rel="stylesheet" href="./assets/icons/fontawesome-free-6.1.1-web/css/all.min.css">
+        {{!-- <link rel="stylesheet" href="./assets/icons/fontawesome-free-6.1.1-web/css/all.min.css"> --}}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
         <script src="script.js"></script>
@@ -16,13 +16,13 @@
     <body>
         <div id="header">
             <div class="header-inner">
-                <a href="index.html" class="header-logo-link">
+                <a href="/" class="header-logo-link">
                     <image src="/img/cropped-bookaholic-1.png" alt="" class="logo"></image>
                 </a>
             </div>
 
             <div class="text-content">
-                <h2 class="text-heading" ><a href="index.html" >Book Enthusiast</a></h2>
+                <h2 class="text-heading" ><a href="/" >Book Enthusiast</a></h2>
                 <p class="text-decription">Sách mở ra trước mắt tôi những chân trời mới</p>
             </div>
 
@@ -36,84 +36,119 @@
             </div>
 
             <!-- Navigation -->
-            <div class="nav">
-                <nav id="navigation">
-                    <div class="menu-navigation">
-                        <button class="nav-menu">
-                            <i class="fa-solid fa-bars"></i>
-                            MENU
-                        </button>
-
-                        <!-- button Search -->
-                        <a class="search-button" href="#">
-                            <i class="search-icon fa-solid fa-magnifying-glass"></i>
-                        </a> 
-                        <div class="menu-items">
-                            <ul class="menu">
-                                <li>
-                                    <a href="">THÔNG TIN</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="page Su-kien.html" target="_parent">Sự kiện</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="">CỘNG ĐỒNG</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="page Diem-tin-sach .html" target="_parent">Điểm tin sách</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="">CUỘC SỐNG</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="page Phim-chuyen-the.html" target="_parent">Phim chuyển thể</a></li>
-                                        <li><a href="page Sach-nen-doc.html" target="_parent">Sách nên đọc</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html" target="_parent">CONTACT</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <ul id="main-nav">
+    <div class="nav">
+        <nav id="navigation">
+            <div class="menu-navigation">
+                <button class="nav-menu">
+                    <i class="fa-solid fa-bars"></i>
+                    MENU
+                </button>
+                <!-- button Search -->
+                <a class="search-button" href="#">
+                    <i class="search-icon fa-solid fa-magnifying-glass"></i>
+                </a>
+                <div class="menu-items">
+                    <ul class="menu">
                         <li>
-                            <a href="">THÔNG TIN
-                                <i class="fa-solid fa-caret-down"></i>
-                            </a>
-                            <ul class="subnav">
+                            <a href="">THÔNG TIN</a>
+                            <ul class="sub-menu">
                                 <li><a href="page Su-kien.html" target="_parent">Sự kiện</a></li>
+                                <li><a href="page Su-kien.html" target="_parent">Giải thưởng</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="">CỘNG ĐỒNG
-                                <i class="fa-solid fa-caret-down"></i>
-                            </a>
-                            <ul class="subnav">
+                            <a href="">CẢM THỨC</a>
+                            <ul class="sub-menu">
+                                <li><a href="page Su-kien.html" target="_parent">Góc cảm nhận</a></li>
+                                <li><a href="page Su-kien.html" target="_parent">Tác Giả</a></li>
+<li><a href="page Su-kien.html" target="_parent">Du lịch</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">CỘNG ĐỒNG</a>
+                            <ul class="sub-menu">
                                 <li><a href="page Diem-tin-sach .html" target="_parent">Điểm tin sách</a></li>
+                                <li><a href="page Su-kien.html" target="_parent">Top 10</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="">CUỘC SỐNG
-                                <i class="fa-solid fa-caret-down"></i>
-                            </a>
-                            <ul class="subnav">
-                                <li><a href="page Phim-chuyen-the.html" target="_parent">Phim chuyển thể</a></li>
-                                <li><a href="page Sach-nen-doc.html" target="_parent">Sách nên đọc</a></li>
+                            <a href="">GIẢI TRÍ </a>
+                            <ul class="sub-menu">
+                                <li><a href="page Diem-tin-sach .html" target="_parent">Phim chuyển thể</a></li>
+                                <li><a href="page Su-kien.html" target="_parent">Light novel</a></li>
                             </ul>
                         </li>
-                        <li><a href="contact.html" target="_parent">CONTACT</a></li>
+                        <li>
+                            <a href="">ĐỜI SỐNG</a>
+                            <ul class="sub-menu">
+                                <li><a href="page Phim-chuyen-the.html" target="_parent">Công việc</a></li>
+                                <li><a href="page Sach-nen-doc.html" target="_parent">Nghệ thuật sống</a></li>
+                                <li><a href="page Sach-nen-doc.html" target="_parent">Sức khỏe</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-                    <!-- button Search -->
-                    <a class="search-button" href="#">
-                        <i class="search-icon fa-solid fa-magnifying-glass"></i>
-                    </a>  
-                </ul>
-            </nav>
-        </div>
+            <ul id="main-nav">
+                <li>
+                    <a href="">THÔNG TIN
+                        <i class="fa-solid fa-caret-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="page Su-kien.html" target="_parent">Sự kiện</a></li>
+                        <li><a href="page Su-kien.html" target="_parent">Giải thưởng</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">CẢM THỨC
+                        <i class="fa-solid fa-caret-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="page Su-kien.html" target="_parent">Góc cảm nhận</a></li>
+                        <li><a href="page Su-kien.html" target="_parent">Tác Giả</a></li>
+                        <li><a href="page Su-kien.html" target="_parent">Du lịch</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">CỘNG ĐỒNG
+                        <i class="fa-solid fa-caret-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="page Diem-tin-sach .html" target="_parent">Điểm tin sách</a></li>
+                        <li><a href="page Su-kien.html" target="_parent">Top 10</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">GIẢI TRÍ
+                        <i class="fa-solid fa-caret-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="page Diem-tin-sach .html" target="_parent">Phim chuyển thể</a></li>
+                        <li><a href="page Su-kien.html" target="_parent">Light novel</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">ĐỜI SỐNG
+                        <i class="fa-solid fa-caret-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="page Phim-chuyen-the.html" target="_parent">Công việc</a></li>
+                        <li><a href="page Sach-nen-doc.html" target="_parent">Nghệ thuật sống</a></li>
+                        <li><a href="page Sach-nen-doc.html" target="_parent">Sức khỏe</a></li>
+                    </ul>
+                </li>
+
+                <!-- button Search -->
+                <a class="search-button" href="#">
+                    <i class="search-icon fa-solid fa-magnifying-glass"></i>
+                </a>
+            </ul>
+        </nav>
+    </div>
 
         
-        <div class="container"> 
             {{{ body }}}
-        </div>
         
         <div id="footer">
             <div class="container">
@@ -127,7 +162,7 @@
             </div>
         </div>
         <div class="btn-login">
-            <a class="log-in" href="/login" target="_parent">Login</a>
+            <a class="log-in" href="/login">Login</a>
         </div>
     </div>
    

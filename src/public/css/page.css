@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab:wght@500&family=Roboto:wght@300&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background: #f1f1f1;
+  border: none;
+  color: #444;
+  font-family: "Roboto",sans-serif;
+ 
+  margin: 0;
+  text-align: justify;
+  -webkit-font-smoothing: antialiased;
+  line-height: 150%;
+  font-weight: 550;
+}
+
+.row{
+  margin:5%;
+
+}
+.leftcolumn { 
+  float: left;
+  width: 70%;
+  
+}
+.rightcolumn {
+  float: left;
+  width: 30%;
+  text-align: center;
+  padding-left:5%;
+
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;     
+}
+  
+#card, .card {
+  background-color: white;
+  padding:5%;
+  
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+
+  text-align: center;
+  background:  rgb(62, 62, 62);
+  color:rgb(169,184,195);
+  padding-bottom:20px;
+
+
+
+}
+@media screen and (max-width: 900px) {
+  .leftcolumn, .rightcolumn { 
+  width: 100%;
+  padding: 5%;
+  }
+}
+#he{
+  color:#444;
+  line-height: 150%;
+}
+a{
+  color:rgb(19, 196, 165);
+  text-decoration: none;
+
+}
+.DIV_3121 a:hover{
+  border-bottom: solid 2px rgb(19, 196, 165);
+ 
+  
+}
+#he:hover{
+  color:rgb(19, 196, 165);
+  text-decoration: none;
+}
+.DIV_311 a:hover{
+  color:rgb(19, 196, 165);
+  text-decoration: none;
+}
+.DIV_33 a:hover{
+  border-bottom: solid 2px rgb(19, 196, 165); 
+}
+
+.DIV_31211{
+  float:left;
+  width:50%;
+  padding-left: 35px;
+}
+.DIV_3121:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 400px) {
+  .DIV_31211 { 
+  width: 100%;
+  padding: 0;
+  }
+}
+a.button {
+  background-color: rgb(238,238,238);
+  color: black;
+  border: 2px solid rgb(169,184,195);
+  border-radius:3px;
+  margin: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Lucida Sans Unicode";
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.4s;
+  padding: 8px 16px;
+  
+}
+h3{
+  padding: 10px;
+}
+
+h2{
+  font-size: 16px;
+  font-family: "Lucida Sans Unicode";
+  padding-bottom: 10px;
+}
+#P_6{
+  text-align: right;
+}
+.footer h2{
+  color:white;
+  font-size: 30px;;
+}
+.back{
+ 
+  padding: 10px;
+  text-align: center;
+  background: black;
+  margin-top: 10px;
+
+}
+span{
+    padding-top: 10px;
+}
+
+section .container .containerForm h2{
+    color: #0f3959;
+    font-size: 24px;
+    font-weight: 500;
+}
+section .container .containerForm .formBox{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+section .container .containerForm .formBox .inputBox{
+    position: relative;
+    margin: 0 0 35px 0;
+}
+section .container .containerForm .formBox .inputBox.w50{
+    width: 47%;
+}
+section .container .containerForm .formBox .inputBox.w100{
+    width: 100%;
+}
+section .container .containerForm .formBox .inputBox input,
+ section .container .containerForm .formBox .inputBox textarea{
+     width: 100%;
+     padding: 5px 0;
+     resize: none;
+     font-size: 18px;
+     font-weight: 400;
+     color: #333;
+     border: none;
+     border-bottom: 1px solid #777;
+     outline: none;
+ }
+section .container .containerForm .formBox .inputBox textarea{
+     min-height: 120px;
+ }
+section .container .containerForm .formBox .inputBox input[type="submit"]{
+     position: relative;
+     cursor: pointer;
+     background: #0f3959;
+     color: #fff;
+     border: none;
+     max-width: 150px;
+     padding: 12px;
+ }
+section .container .containerForm .formBox .inputBox input[type="submit"]:hover{
+     background:  #ff568c;
+ }
+ section .container .containerForm .formBox .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+    transition: 0.5s;
+    pointer-events: none;
+}
+section .container .containerForm .formBox .inputBox input:focus ~ span,
+section .container .containerForm .formBox .inputBox textarea:focus ~ span,
+section .container .containerForm .formBox .inputBox input:valid ~ span,
+section .container .containerForm .formBox .inputBox textarea:valid ~ span{
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #ff568c
+}

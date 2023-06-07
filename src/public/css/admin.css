@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    width: 85%;
+    margin: 0 auto;
+}
+
+
+body {
+    background-image: url(https://wallpaperaccess.com/full/6191149.jpg);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.card-single{
+    display: flex;
+    background: #fff;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 5px 10px 2px rgb(0 0 0 / 10%);
+    margin: 5px 0;
+ }
+
+
+.row-1 {
+  float: left;
+  width: 100%;
+}
+
+.mb {
+    margin-bottom: 15px;
+}
+
+.header {
+    background-image: linear-gradient(purple, pink);
+    color: #fff;
+    border-radius: 5px;
+    height: 160px;
+    line-height: 150px;
+}
+
+.img-avatar{
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin-left: 21rem;
+}
+
+.header h1 {
+    margin-left: 10px;
+    line-height: 80px;
+    display: inline;
+}
+
+.menu-content{
+  overflow: auto;
+}
+
+.menu ul{
+    /* background: rgb(170,34,106); */
+    background: linear-gradient(90deg, rgba(170,34,106,1) 11%, rgba(120,9,128,1) 71%);
+    border-radius: 5px;
+    list-style-type: none;
+    max-height: 100%;
+    
+}
+.menu li {
+    padding: 0 20px;
+    display: inline-block;
+}
+.menu li.active-style a{
+    font-size: 20px;
+    color: #fff;
+}
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ccc;
+    line-height: 50px;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.menu li:hover a{
+    color: #fff;
+    font-size: 20px;
+
+}
+
+.fa-solid{
+  padding-right: 5px;
+}
+
+.fa-magnifying-glass:hover{
+  color: #fff;
+  font-size: 20px;
+}
+
+.menu-item {
+    /* background: rgb(163,34,170); */
+    background: linear-gradient(90deg, rgba(163,34,170,1) 22%, rgba(9,19,128,1) 100%);
+    border-radius: 5px;
+    padding: 25px;
+    height: auto;
+}
+.menu-item p {
+    margin: 0;
+    color: #fff;
+    font-weight: 500;
+}
+
+.menu-item input[type="text"]{
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    padding: 4px 16px;    
+}
+.menu-item input[type="text-des"]{
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    padding: 4px 16px;    
+    height: 10rem;
+}
+
+.menu-item input[type="submit"],
+.menu-item input[type="reset"],
+.menu-item input[type="button"] {
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.menu-item input[type="button"]:hover {
+    background-color: #ccc;
+}
+
+.products-list {
+    background-color: #fff;
+}
+
+.products-list  input[type="button"] {
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 2px 5px;
+    margin-right: 5px;
+}
+
+
+ /* Thong Ke */
+ .barchart-main {
+    display: table;
+    position: relative;
+    margin: 20px 0;
+    height: 25rem;
+  }
+  .barChart-Container {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+  }
+  .barchart {
+   display: table;
+   table-layout: fixed;  
+   height: 100%;
+   width: 100%;
+  }

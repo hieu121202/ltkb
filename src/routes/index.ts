@@ -1,5 +1,6 @@
 
 import siteRouter from './site'
+import loginRouter from './login'
 import adminRouter from './admin'
 import connection from '~/config/myDataSource'
 
@@ -7,7 +8,9 @@ import { NextFunction, Router, Request, Response } from 'express'
 
 function route(app: any) {
 
-  app.use('/login',adminRouter)
+  app.use('/login',loginRouter)
+  app.use('/admin',adminRouter)
+  // app.use('/:id',siteRouter)
   
   //getAll
   // app.get('/u', (req: Request, res: Response) => {

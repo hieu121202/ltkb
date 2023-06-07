@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/icons/fontawesome-free-6.1.1-web/css/all.min.css">
+  <title>Trang quản trị</title>
+</head>
+
+<body>
+  <div class="main">
+    <div class="row-cols-1 mb header">
+      <img class="img-avatar" src="/image/avatar.jpg" alt="">
+      <h1>Chào mừng quản trị viên!</h1>
+    </div>
+
+    <div class="row-cols-1 menu">
+      <ul>
+
+        <li><i class="fa-solid fa-list-check"></i><a href="admin">Danh sách</a></li>
+        <li><i class="fa-solid fa-plus"></i><a href="/admin/baiviet">Thêm bài viết</a></li>
+        <li><i class="fa-solid fa-plus"></i><a href="/">Trang chủ</a></li>
+
+
+      </ul>
+    </div>
+
+
+    <div id="products" class="row-cols-1 menu-item">
+      <div class="container-products">
+        <table class="table table-hover products-list">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Title</th>
+              <th scope="col">Chủ đề</th>
+              <th scope="col">Avatar</th>
+              <th scope="col">Option</th>
+            </tr>
+          </thead>
+          <tbody>
+
+        </table>
+        <div class="row-cols-1">
+          <input type="button" value="Chọn tất cả">
+          <input type="button" value="Bỏ chọn tất cả">
+          <input type="button" value="Xóa các mục đã chọn">
+        </div>
+      </div>
+
+    </div>
+
+
+</body>
+
+</html>
