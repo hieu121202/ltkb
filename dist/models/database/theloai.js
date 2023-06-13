@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.theloai = void 0;
 const typeorm_1 = require("typeorm");
-const baiviet_1 = require("./baiviet");
+const theloai2_1 = require("./theloai2");
 let theloai = class theloai extends typeorm_1.BaseEntity {
 };
 __decorate([
@@ -23,9 +23,9 @@ __decorate([
     __metadata("design:type", String)
 ], theloai.prototype, "tentloai", void 0);
 __decorate([
-    (0, typeorm_1.OneToMany)(() => baiviet_1.baiviet, (baiviet) => baiviet.theloai),
+    (0, typeorm_1.OneToMany)(() => theloai2_1.theloai2, (theloai2) => theloai2.theloai),
     __metadata("design:type", Array)
-], theloai.prototype, "baiviet", void 0);
+], theloai.prototype, "theloai2", void 0);
 theloai = __decorate([
     (0, typeorm_1.Entity)()
 ], theloai);

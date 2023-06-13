@@ -1,7 +1,8 @@
 import { DataSource } from 'typeorm'
 import { baiviet } from '../models/database/baiviet'
-import { Message } from '../models/database/Message'
+import { users } from '../models/database/users'
 import { theloai } from '~/models/database/theloai'
+import { theloai2 } from '~/models/database/theloai2'
 
 const port = process.env.PORT || 3000
 const myDataSource = new DataSource({
@@ -10,10 +11,10 @@ const myDataSource = new DataSource({
   port: process.env.PORT,
   username: 'root',
   password: '',
-  database: 'sech',
-  entities: [baiviet,theloai],
+  database: 'sach',
+  entities: [baiviet,theloai2,theloai,users],
   logging: true,
-  synchronize: true
+  synchronize: false
 })
 export default myDataSource
 

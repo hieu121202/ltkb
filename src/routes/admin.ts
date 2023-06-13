@@ -1,9 +1,14 @@
 import adminController from '~/controllers/adminController'
+import { sessionMiddleware } from '../middlewares/session.middleware';
+import { isLoggedIn } from '../middlewares/auth.middleware';
 import { NextFunction, Router, Request, Response } from 'express'
 const router = Router()
 
-router.use('/baiviet', adminController.baiviet)
-router.use('/', adminController.admin)
+router.use(sessionMiddleware);
+router.use('/baiviet',isLoggedIn, adminController.baiviet)
+router.post('/store', adminController.addBaiviet) //them
+router.use('/:id', adminController.adminwithId)     //sua
+router.use('/',isLoggedIn, adminController.admin)
 
 
 

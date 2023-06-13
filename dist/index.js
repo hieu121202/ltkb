@@ -28,6 +28,11 @@ app.use(morgan('combined'));
 //khai báo để sử dụng khi lấy dữ liệu từ post lên nó sẽ lưu vào body
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
+app.use(session({
+    secret: 'my-secret-key',
+    resave: false,
+    saveUninitialized: true
+}));
 myDataSource_1.default
     .initialize()
     .then(() => {

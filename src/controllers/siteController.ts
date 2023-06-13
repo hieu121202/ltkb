@@ -2,7 +2,10 @@ import { NextFunction, Router, Request, Response } from 'express'
 import { baiviet } from '~/models/database/baiviet'
 import myDataSource from '~/config/myDataSource'
 import { In, LessThan } from 'typeorm'
+import { theloai2 } from '~/models/database/theloai2'
 
+const theloaiRepository = myDataSource.getRepository(theloai2)
+const baivietRepository = myDataSource.getRepository(baiviet)
 class siteController {
   public static home(req: Request, res:Response , next:NextFunction) { 
     // return
@@ -20,7 +23,7 @@ class siteController {
   //   res.render('site')
   // }
 
-  public static homewithId(req: Request, res:Response, next:NextFunction){
+  public static async homewithId(req: Request, res:Response, next:NextFunction){
     // const ids = req.params['ids'] ? req.params['ids'].split(',') : [];
     // const data = myDataSource.manager.find(baiviet, {
     //   where: { id: In(ids) }
@@ -28,22 +31,15 @@ class siteController {
     // // data.then(data => res.render('/site', { data: data}));
     // data.then((data) => {res.json(data);
     // })
-    const id = req.params['id'];
-    const data= myDataSource.manager.findOne(baiviet, { where: { id: (Number.parseInt(id) ) }})
-      .then((data) => {
-        if (!data) {
-          // Nếu không tìm thấy dữ liệu, trả về lỗi 404 Not Found
-          res.status(404).send('Not found');
-        } else {
-          // Nếu tìm thấy dữ liệu, trả về dưới dạng JSON
-          // res.json(data);
-          res.render('site', { data: data, layout: "pagelayout" });
-        }
+    // const id = req.params['id'];
+    const results = await myDataSource.getRepository(baiviet)
+      .createQueryBuilder("baiviet")
+      .where("baiviet.id = :id", {
+        id: req.params['id'],
       })
-      .catch((err) => {
-        next(err);
-      });
-  }
+      .getOne()
+      res.render('site', { data: results, layout: "pagelayout" });
+    }
 //   public static index(req: any, res: any, next: any) {
 //     // return
 //     if (req.isAuthenticated()) {
@@ -53,7 +49,69 @@ class siteController {
 //   }
 //   public static create(req: any, res: any, next: any) {
 //     return
+  public static async menu(req: Request, res: Response, next: NextFunction) {
+    // let theloai2Id;
+    // if (req.path === '/su-kien') {
+    //   theloai2Id = 1; // ID của thể loại giải trí
+    // } else if (req.path === '/giai-thuong') {
+    //   theloai2Id = 2; // ID của thể loại sự kiện
+    // }else if (req.path === '/goc-cam-nhan') {
+    //   theloai2Id = 3; // ID của thể loại sự kiện
+    // }else if (req.path === '/tac-gia') {
+    //   theloai2Id = 4; // ID của thể loại sự kiện
+    // }else if (req.path === '/du-lich') {
+    //   theloai2Id = 5; // ID của thể loại sự kiện
+    // }else if (req.path === '/diem-tin-sach') {
+    //   theloai2Id = 6; // ID của thể loại sự kiện
+    // }else if (req.path === '/top-10') {
+    //   theloai2Id = 7; // ID của thể loại sự kiện
+    // }else if (req.path === '/phim-chuyen-the') {
+    //   theloai2Id = 8; // ID của thể loại sự kiện
+    // }else if (req.path === '/cong-viec') {
+    //   theloai2Id = 9; // ID của thể loại sự kiện
+    // }else if (req.path === '/nghe-thuat-song') {
+    //   theloai2Id = 10; // ID của thể loại sự kiện
+    // }else if (req.path === '/suc-khoe') {
+    //   theloai2Id = 11; // ID của thể loại sự kiện
+    // }else if (req.path === '/light-novel') {
+    //   theloai2Id = 12; // ID của thể loại sự kiện
+    // }
+
+    const data = await baivietRepository
+      .createQueryBuilder('baiviet')
+      // .select('baiviet.*, theloai2.tentloai,theloai2.id')
+      // .from(baiviet, 'baiviet')
+      .leftJoinAndSelect('baiviet.theloai2' ,'theloai2')
+      .where('baiviet.theloai2.id = :id', {  id: req.params['id'], })
+      .getMany()
+      res.render('home', { data: data})
+      // data.then(data => res.json(data));
   }
+
+  public static async menu1(req: Request, res: Response, next: NextFunction) {
+    const data = await baivietRepository
+      .createQueryBuilder('baiviet')
+      .leftJoinAndSelect('baiviet.theloai2', 'theloai2')
+      .leftJoinAndSelect('theloai2.theloai', 'theloai')
+      .where('theloai.id = :id', {  id: req.params['id'], })
+      .getMany();
+    res.render('home', { data: data });
+  }
+
+  public static async search(req: Request, res: Response, next: NextFunction) {
+    const query = req.query['q'];
+  
+    const data = await baivietRepository
+      .createQueryBuilder('baiviet')
+      // .leftJoinAndSelect('baiviet.theloai', 'theloai')
+      .where('baiviet.tieude LIKE :query', { query: `%${query}%` })
+      .getMany();
+  
+    res.render('home', { data: data, query: query });
+  }
+  }
+
+
 
   
 export default siteController

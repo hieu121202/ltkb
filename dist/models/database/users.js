@@ -9,27 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Message = void 0;
+exports.users = void 0;
 const typeorm_1 = require("typeorm");
-let Message = class Message extends typeorm_1.BaseEntity {
+let users = class users extends typeorm_1.BaseEntity {
 };
 __decorate([
     (0, typeorm_1.PrimaryGeneratedColumn)(),
-    __metadata("design:type", Number)
-], Message.prototype, "id", void 0);
+    __metadata("design:type", String)
+], users.prototype, "taikhoan", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], Message.prototype, "userSend", void 0);
-__decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", String)
-], Message.prototype, "userReceive", void 0);
-__decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", String)
-], Message.prototype, "content", void 0);
-Message = __decorate([
+], users.prototype, "matkhau", void 0);
+users = __decorate([
     (0, typeorm_1.Entity)()
-], Message);
-exports.Message = Message;
+], users);
+exports.users = users;

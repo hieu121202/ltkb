@@ -32,6 +32,12 @@ app.use(morgan('combined'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
+app.use(session({
+  secret: 'my-secret-key',
+  resave: false,
+  saveUninitialized: true
+}));
+
 myDataSource
   .initialize()
   .then(() => {

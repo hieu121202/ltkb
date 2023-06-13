@@ -10,15 +10,17 @@
     </section>
     <button type="submit">Sign in</button>
 </form> --}}
-
-<body>
-    <!-- <form class="box" action="login.html" method="POST"> -->
-      <div class="box">
-        <h1>ĐĂNG NHẬP</h1>
-        <input type="text" name="" placeholder="Enter Username" class="username">
-        <input type="password" name="" placeholder="Enter Password" class="password">
-        <button type="submit" class="button-login">Login</button>
-      </div>
-        <!-- </form> -->
-</body>
+<form class="box" action="/login" method="POST">
+    <body>
+      <!-- <form class="box" action="login.html" method="POST"> -->
+        <div class="box">
+          <h1>ĐĂNG NHẬP</h1>
+          <input type="text" name="username" placeholder="Enter Username" class="username" required>
+          <input type="password" name="password" placeholder="Enter Password" class="password" required>
+          <button type="submit" class="button-login">Login</button>
+        </div>
+          <!-- </form> -->
+  </body>
+</form>
+  
 

@@ -17,8 +17,25 @@ class siteController {
         // res.redirect('/')
     }
     //GET items
-    static site(req, res, next) {
-        res.render('site');
+    // public static site(req: Request, res:Response , next:NextFunction){
+    //   res.render('site')
+    // }
+    static async homewithId(req, res, next) {
+        // const ids = req.params['ids'] ? req.params['ids'].split(',') : [];
+        // const data = myDataSource.manager.find(baiviet, {
+        //   where: { id: In(ids) }
+        // });
+        // // data.then(data => res.render('/site', { data: data}));
+        // data.then((data) => {res.json(data);
+        // })
+        // const id = req.params['id'];
+        const results = await myDataSource_1.default.getRepository(baiviet_1.baiviet)
+            .createQueryBuilder("baiviet")
+            .where("baiviet.id = :id", {
+            id: req.params['id'],
+        })
+            .getOne();
+        res.render('site', { data: results, layout: "pagelayout" });
     }
 }
 exports.default = siteController;

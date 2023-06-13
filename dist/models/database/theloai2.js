@@ -9,36 +9,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.baiviet = void 0;
+exports.theloai2 = void 0;
 const typeorm_1 = require("typeorm");
-const theloai2_1 = require("./theloai2");
-let baiviet = class baiviet extends typeorm_1.BaseEntity {
+const baiviet_1 = require("./baiviet");
+const theloai_1 = require("./theloai");
+let theloai2 = class theloai2 extends typeorm_1.BaseEntity {
 };
 __decorate([
     (0, typeorm_1.PrimaryGeneratedColumn)(),
     __metadata("design:type", Number)
-], baiviet.prototype, "id", void 0);
+], theloai2.prototype, "id", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], baiviet.prototype, "tieude", void 0);
+], theloai2.prototype, "tentloai", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", String)
-], baiviet.prototype, "hinh", void 0);
-__decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", String)
-], baiviet.prototype, "trichdan", void 0);
-__decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", String)
-], baiviet.prototype, "noidung", void 0);
-__decorate([
-    (0, typeorm_1.ManyToOne)(() => theloai2_1.theloai2, (theloai2) => theloai2.baiviet),
+    (0, typeorm_1.OneToMany)(() => baiviet_1.baiviet, (baiviet) => baiviet.theloai2),
     __metadata("design:type", Array)
-], baiviet.prototype, "theloai2", void 0);
-baiviet = __decorate([
+], theloai2.prototype, "baiviet", void 0);
+__decorate([
+    (0, typeorm_1.ManyToOne)(() => theloai_1.theloai, (theloai) => theloai.theloai2),
+    __metadata("design:type", Array)
+], theloai2.prototype, "theloai", void 0);
+theloai2 = __decorate([
     (0, typeorm_1.Entity)()
-], baiviet);
-exports.baiviet = baiviet;
+], theloai2);
+exports.theloai2 = theloai2;

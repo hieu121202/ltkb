@@ -2,7 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
 const baiviet_1 = require("../models/database/baiviet");
+const users_1 = require("../models/database/users");
 const theloai_1 = require("../models/database/theloai");
+const theloai2_1 = require("../models/database/theloai2");
 const port = process.env.PORT || 3000;
 const myDataSource = new typeorm_1.DataSource({
     type: 'mysql',
@@ -10,10 +12,10 @@ const myDataSource = new typeorm_1.DataSource({
     port: process.env.PORT,
     username: 'root',
     password: '',
-    database: 'sech',
-    entities: [baiviet_1.baiviet, theloai_1.theloai],
+    database: 'sach',
+    entities: [baiviet_1.baiviet, theloai2_1.theloai2, theloai_1.theloai, users_1.users],
     logging: true,
-    synchronize: true
+    synchronize: false
 });
 exports.default = myDataSource;
 // import mysql from 'mysql';

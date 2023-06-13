@@ -4,9 +4,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const site_1 = __importDefault(require("./site"));
+const login_1 = __importDefault(require("./login"));
 const admin_1 = __importDefault(require("./admin"));
+const logout_1 = __importDefault(require("./logout"));
+// import { checkLogin } from '~/middlewares/requireLogin'
 function route(app) {
-    app.use('/login', admin_1.default);
+    app.use('/login', login_1.default);
+    app.use('/logout', logout_1.default);
+    app.use('/admin', admin_1.default);
+    // app.use('/:id',siteRouter)
     //getAll
     // app.get('/u', (req: Request, res: Response) => {
     //   connection.query('SELECT * FROM baiviet', (error, results, fields) => {

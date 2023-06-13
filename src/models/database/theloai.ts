@@ -1,5 +1,5 @@
 import { Entity, Column, BaseEntity, PrimaryGeneratedColumn, OneToMany } from 'typeorm'
-import { baiviet } from './baiviet'
+import { theloai2 } from './theloai2'
 @Entity()
 export class theloai extends BaseEntity {
   @PrimaryGeneratedColumn()
@@ -8,8 +8,6 @@ export class theloai extends BaseEntity {
   @Column()
   tentloai: string
 
-    @OneToMany(() => baiviet , (baiviet) => baiviet.theloai)
-    baiviet: baiviet[]
-  
+  @OneToMany(() => theloai2, (theloai2) => theloai2.theloai)
+  theloai2: theloai2[]
 }
-

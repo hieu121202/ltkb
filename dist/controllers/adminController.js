@@ -1,9 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class adminController {
-    static login(req, res, next) {
+    static admin(req, res, next) {
         // return
-        res.render('login', { title: "login", layout: "loginlayout" });
+        res.render('admin', { title: "admin", layout: "" });
+        // if (req.isAuthenticated()) {
+        //   res.redirect('/admin')
+        // }
+        // res.redirect('/')
+    }
+    static baiviet(req, res, next) {
+        // return
+        res.render('baiviet', { layout: "" });
         // if (req.isAuthenticated()) {
         //   res.redirect('/admin')
         // }
