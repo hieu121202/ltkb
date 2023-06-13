@@ -5,9 +5,11 @@ import { NextFunction, Router, Request, Response } from 'express'
 const router = Router()
 
 router.use(sessionMiddleware);
+router.get('/suabaiviet', adminController.adminwithId)     //sua
+router.put('/suabaiviet',adminController.update)
+router.delete('/delete', adminController.destroy)
 router.use('/baiviet',isLoggedIn, adminController.baiviet)
 router.post('/store', adminController.addBaiviet) //them
-router.use('/:id', adminController.adminwithId)     //sua
 router.use('/',isLoggedIn, adminController.admin)
 
 

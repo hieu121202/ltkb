@@ -1,6 +1,7 @@
 import express from 'express'
 import route from './routes/index'
 import myDataSource from './config/myDataSource'
+import methodOverride from "method-override";
 const app = require('express')()
 const bodyParser = require('body-parser')
 const path = require('path')
@@ -18,6 +19,7 @@ app.engine(
     extname: '.hbs'
   })
 )
+app.use(methodOverride("_method"));
 app.set('view engine', '.hbs')
 app.set('views', path.join(path.resolve('src/resources'),'views'))
 

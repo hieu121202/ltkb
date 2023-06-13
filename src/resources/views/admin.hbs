@@ -17,8 +17,12 @@
                     <td>{{this.tentloai}}</td>
                     <td>{{this.hinh}}</td>
                     <td>
-                        <a href="/admin/baiviet/{{this.id}}">Sửa</a>
-                        <a href="/admin/baiviet/delete/<%= item.id %>">Xóa</a>
+                        <a href="/admin/suabaiviet?id={{this.id}}">Sửa</a>
+                        <a href="/admin/delete?id={{this.id}}">               
+                            <form  method="post" action="/admin/delete?id={{this.id}}&_method=DELETE">
+                              <input type="submit" value="Xóa">
+                            </form>
+                       </a>
                     </td>
                 </tr>
             </tbody>

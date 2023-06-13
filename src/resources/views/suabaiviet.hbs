@@ -1,6 +1,6 @@
 <div id="add" class="row-cols-1 menu-item">
   <div class="form-products">
-    <form method="POST" action="/admin/store">
+    <form method="POST" action="/admin/suabaiviet?id={{data.id}}&_method=PUT">
       <div class="row-cols-1 mb-3">
         <p>Title:</p>
         <input type="text" value="{{data.tieude}}" name="tieude" id="tieude">
@@ -10,7 +10,6 @@
         <p>Trích dẫn:</p>
         <input type="text" value="{{data.trichdan}}" name="trichdan" id="trichdan">
 
-      </div>
       <div class="row-cols-1 mb-3">
         <p>Chủ đề:</p>
         <select id="theloai" name="theloai">
@@ -31,14 +30,15 @@
       </div>
       <div class="row-cols-1 mb-3">
         <p>Đường dẫn ảnh:</p>
-        <input type="text" value="{{data.hinh}}" name="noidung" id="noidung">
+        <input type="text" value="{{data.hinh}}" name="hinh" id="hinh">
       </div>
       <div class="row-cols-1 mb-3">
         <p>Nội dung</p>
          <input type="text" value="{{data.noidung}}" name="noidung" id="noidung">
       </div>
       <div class="row-cols-1 mb-3">
-        <button type="submit">Đồng ý</button>
+        {{!-- <input type="submit">Đồng ý</input> --}}
+        <input type="submit" >
       </div>
     </form>
   </div>
