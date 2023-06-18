@@ -15,9 +15,13 @@
             <a href="" id="he" rel="bookmark">{{data.tieude}}</a>
         </h1>
 
+        <p class="trichdan"">
+             {{data.trichdan}}
+        </p>
+
         <img  src="{{data.hinh}}">
 
-        <p>
+        <p style="text-indent: 32px;">
              {{data.noidung}}
         </p>
         
@@ -60,20 +64,20 @@
        <div class="DIV_3121">
            <div class="DIV_31211">
                <p>
-                   <a href="https://bookaholicvn.wordpress.com/2013/12/16/nhung-an-y-ve-tinh-duc-trong-charlie-va-nha-may-socola/?relatedposts_hit=1&amp;relatedposts_origin=109611&amp;relatedposts_position=0" title="Những ẩn ý về tình dục trong &amp;#8216;Charlie và nhà máy&amp;nbsp;sôcôla&amp;#8217;" id="A_109">Những ẩn ý về tình dục trong ‘Charlie và nhà máy sôcôla’</a>
+                   <a href="/1" title="" id="">Bài viết 1</a>
                    <time id="TIME_110">
                          December 16, 2013
                      </time>
                </p>
            </div>
            <div class="DIV_31211">
-            <p>
-                   <a href="https://bookaholicvn.wordpress.com/2014/01/04/inferno-cua-dan-brown-da-duoc-mua-ban-quyen-tai-viet-nam/?relatedposts_hit=1&amp;relatedposts_origin=109611&amp;relatedposts_position=1" title="Inferno của Dan Brown đã được mua bản quyền tại Việt&amp;nbsp;Nam" id="A_114">Inferno của Dan Brown đã được mua bản quyền tại Việt Nam</a>
-                   <time>
-                        January 4, 2014
-                    </time>
+               <p>
+                   <a href="/2" title="" id="">Bài viết 2</a>
+                   <time id="TIME_110">
+                         December 16, 2013
+                     </time>
                </p>
-            </div>
+           </div>
             </div>
        </div>
        <div class="footer">
@@ -121,7 +125,7 @@
         <h2>Comments</h2>
         <ul class="comment-list">
              {{#each data.comment}}
-                <li>
+                <li class="comment">
                     <h4>{{ this.name }} :</h4>
                     <p>{{ this.noidung }}</p>
                 </li>

@@ -125,7 +125,11 @@ class siteController {
     ccomment.noidung = noidung;
     ccomment.baiviet =baivietId;
     ccomment.save()
-    res.redirect('/')
+    res.json({
+      name: ccomment.name,
+      noidung: ccomment.noidung
+    });
+    // res.redirect('back')
   } 
   }
 

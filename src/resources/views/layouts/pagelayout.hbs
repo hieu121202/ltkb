@@ -158,4 +158,27 @@
     <a class="log-in" href="/login" target="_parent">Login</a>
 </div>
 </body>
+<script>
+  $(document).ready(() => {
+  const form = $('.formBox');
+  const commentList = $('.comment-list');
+
+  form.submit((event) => {
+    event.preventDefault();
+
+    $.ajax({
+      type: 'POST',
+      url: '/addcomment',
+      data: form.serialize(),
+      success: (comment) => {
+        // Thêm bình luận mới vào danh sách
+        const li = $('<li class="comment"></li>').html(`<h4>${comment.name} :</h4><p>${comment.noidung}</p>`);
+        commentList.append(li);
+        
+        form[0].reset();
+      }
+    });
+  });
+});
+</script>
 </html>

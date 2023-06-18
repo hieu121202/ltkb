@@ -232,7 +232,7 @@ section .container .containerForm .formBox .inputBox textarea:valid ~ span{
   list-style: none;
 }
 
-.comment-list h2 {
+.comment-list h4 {
   font-weight: bold;
   margin: 0;
   margin-bottom: 5px;
