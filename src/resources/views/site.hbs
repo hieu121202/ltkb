@@ -117,22 +117,22 @@
 
                     </div>
                 </form>
+                <div class="">
+                    <h2>Comments</h2>
+                    <ul class="comment-list">
+                        {{#each data.comment}}
+                            <li class="comment">
+                                <h4>{{ this.name }} :</h4>
+                                <p>{{ this.noidung }}</p>
+                            </li>
+                        {{/each}}
+                    </ul>
+             
+    </div>
             </div>
         </div>
     </div>
     </section>
-    <div class="card">
-        <h2>Comments</h2>
-        <ul class="comment-list">
-             {{#each data.comment}}
-                <li class="comment">
-                    <h4>{{ this.name }} :</h4>
-                    <p>{{ this.noidung }}</p>
-                </li>
-            {{/each}}
-        </ul>
-             
-    </div>
 </div>
  </div>
 <div class="rightcolumn">
