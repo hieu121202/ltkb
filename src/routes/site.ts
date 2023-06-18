@@ -16,6 +16,7 @@ const router = Router()
 // router.get('/suc-khoe', siteController.menu)
 router.get('/menu/:id', siteController.menu);
 router.get('/menu1/:id', siteController.menu1);
+router.post('/addcomment', siteController.addComment)
 
 
 router.get('/search/:q', siteController.search);

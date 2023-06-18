@@ -76,4 +76,68 @@
             </div>
             </div>
        </div>
+       <div class="footer">
+        <div class="DIV_33">
+            <img alt="" src="https://0.gravatar.com/avatar/fca9ec2e7ee61f208de0c34b82d47a20?s=90&amp;d=identicon&amp;r=G" height="90" width="90" id="IMG_125" />   
+            <h2>
+                Published by Bookaholic
+            </h2>
+            <p>
+                reading gone wild <a href="https://bookaholicvn.wordpress.com/author/bookaholicvn/" rel="author" id="A_130">View all posts by Bookaholic</a>
+            </p>
+                        
+        </div>
+        </div>
+   
+    <section>
+    <div id="card">
+        <div class="container">
+            <div class="containerForm">
+                <h2>Leave a Reply</h2>
+                <form class="formBox" method="POST" action="/addcomment">
+                    <div class="inputBox w50">
+                        <input type="text" name="name" >
+                        <span>Name</span>
+                    </div>
+                    <div class="inputBox w100">
+                        <textarea name="noidung" ></textarea>
+                        <span>Comment</span>
+                    </div>
+                    <div class="row-cols-1 mb-3">
+                        <input type="hidden" value="{{data.id}}" name="baivietId" id="baivietId">
+
+                    </div>
+                    <div class="inputBox w100">
+                        {{!-- <input type="submit" value="Post comment"> --}}
+                        <button type="submit">Post comment</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </section>
+    <div class="card">
+        <h2>Comments</h2>
+        <ul class="comment-list">
+             {{#each data.comment}}
+                <li>
+                    <h4>{{ this.name }} :</h4>
+                    <p>{{ this.noidung }}</p>
+                </li>
+            {{/each}}
+        </ul>
+             
+    </div>
+</div>
  </div>
+<div class="rightcolumn">
+    <div class="card">
+        <div class="DIV_33">
+            <h3>
+                <a href="https://www.facebook.com/bookaholic.vn" id="A_299">Follow us on Facebook</a>
+            </h3>
+            <div class="fb-page" data-href="https://www.facebook.com/bookaholic.vn/" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/bookaholic.vn/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/bookaholic.vn/">Bookaholic</a></blockquote></div>
+        </div>
+    </div>
+</div>

@@ -2,7 +2,8 @@ import { NextFunction, Router, Request, Response } from 'express'
 import { baiviet } from '~/models/database/baiviet'
 import myDataSource from '~/config/myDataSource'
 import { theloai2 } from '~/models/database/theloai2'
-// const baivietRepository = myDataSource.getRepository(baiviet)
+import { comment } from '~/models/database/comment'
+// const commentRepository = myDataSource.getRepository(comment)
 
 class adminController {
     // public static admin(req: Request, res:Response , next:NextFunction) { 
@@ -118,6 +119,28 @@ class adminController {
         .execute();
       res.redirect("/admin");
     }
+
+    public static async cmt(req: Request, res: Response, next: NextFunction) {
+      const data = myDataSource.manager
+        .createQueryBuilder()
+        .select('comment.*')
+        .from(comment, 'comment')
+        // .leftJoinAndSelect(theloai2, 'theloai2', 'theloai2.id = baiviet.theloai2Id')
+        .getRawMany()
+      data.then((data) => res.render('cmt', { layout: "adminlayout", data: data }));
+  }
+
+  public static async destroycmt(req: Request, res: Response, next: NextFunction) {
+    // console.log('xóa')
+    const a= await myDataSource.getRepository(comment)
+      .createQueryBuilder('comment')
+      .delete()
+      .where("id = :id", { id: req.query['id'] })
+      // .getOne();
+      // res.json(a);
+      .execute();
+    res.redirect("/admin/cmt");
+  }
     // public static admin(req: Request, res:Response,next:NextFunction) {
     //   res.render('admin',{title:"admin",layout:""});
     // }

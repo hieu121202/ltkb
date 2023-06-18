@@ -225,3 +225,43 @@ section .container .containerForm .formBox .inputBox textarea:valid ~ span{
     letter-spacing: 1px;
     color: #ff568c
 }
+
+.comment-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.comment-list h2 {
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 5px;
+  font-family: "Lucida Sans Unicode";
+}
+
+.comment-list p {
+  margin: 0;
+  margin-left: 10px;
+}
+
+.comment-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.inputBox button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.inputBox button[type="submit"]:hover {
+  background-color: #3E8E41;
+}

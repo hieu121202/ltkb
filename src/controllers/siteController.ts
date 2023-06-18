@@ -3,9 +3,12 @@ import { baiviet } from '~/models/database/baiviet'
 import myDataSource from '~/config/myDataSource'
 import { In, LessThan } from 'typeorm'
 import { theloai2 } from '~/models/database/theloai2'
+import { comment } from '~/models/database/comment'
 
 const theloaiRepository = myDataSource.getRepository(theloai2)
 const baivietRepository = myDataSource.getRepository(baiviet)
+const commentRepository = myDataSource.getRepository(comment)
+
 class siteController {
   public static home(req: Request, res:Response , next:NextFunction) { 
     // return
@@ -34,10 +37,13 @@ class siteController {
     // const id = req.params['id'];
     const results = await myDataSource.getRepository(baiviet)
       .createQueryBuilder("baiviet")
-      .where("baiviet.id = :id", {
-        id: req.params['id'],
-      })
-      .getOne()
+      // .where("baiviet.id = :id", {
+      //   id: req.params['id'],
+      // })
+      // .getOne()
+      .leftJoinAndSelect("baiviet.comment", "comment")
+      .where("baiviet.id = :id", { id: req.params['id'] })
+      .getOne();
       res.render('site', { data: results, layout: "pagelayout" });
     }
 //   public static index(req: any, res: any, next: any) {
@@ -109,6 +115,18 @@ class siteController {
   
     res.render('home', { data: data, query: query });
   }
+
+  public static async addComment(req: Request, res: Response, next: NextFunction) {
+    // res.json(req.body);
+    console.log('test addComment');
+    const { name, noidung,baivietId} = req.body;
+    const ccomment = new comment();
+    ccomment.name = name;
+    ccomment.noidung = noidung;
+    ccomment.baiviet =baivietId;
+    ccomment.save()
+    res.redirect('/')
+  } 
   }
 
 

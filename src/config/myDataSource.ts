@@ -3,6 +3,7 @@ import { baiviet } from '../models/database/baiviet'
 import { users } from '../models/database/users'
 import { theloai } from '~/models/database/theloai'
 import { theloai2 } from '~/models/database/theloai2'
+import { comment } from '~/models/database/comment'
 
 const port = process.env.PORT || 3000
 const myDataSource = new DataSource({
@@ -12,7 +13,7 @@ const myDataSource = new DataSource({
   username: 'root',
   password: '',
   database: 'sach',
-  entities: [baiviet,theloai2,theloai,users],
+  entities: [baiviet,theloai2,theloai,users,comment],
   logging: true,
   synchronize: false
 })
